@@ -1,0 +1,44 @@
+{
+  "name": "@bredele/dns-check",
+  "version": "1.0.0",
+  "description": "Check DNS availability",
+  "main": "./dist/cjs/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "cmplr --type-check",
+    "test": "node --test dist/cjs/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bredele/check-dns.git"
+  },
+  "keywords": [
+    "dns",
+    "resolution",
+    "availability"
+  ],
+  "author": "Olivier Wietrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bredele/check-dns/issues"
+  },
+  "homepage": "https://github.com/bredele/check-dns#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "cmplr": "^1.1.0"
+  },
+  "dependencies": {
+    "dns-resolve": "1.0.1"
+  },
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  }
+}
